@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b2c9e9b-cdf6-4919-91b0-5d498200a78c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Arm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Arm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/frc/robot/Robot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,6 @@
     <servers />
   </component>
   <component name="WpiLibVersionService">
-    <option name="lastChecked" value="20231026164244" />
+    <option name="lastChecked" value="20231027101811" />
   </component>
 </project>

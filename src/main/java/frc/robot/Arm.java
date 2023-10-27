@@ -7,7 +7,6 @@ import com.ctre.phoenix.motorcontrol.TalonFXSensorCollection;
 public class Arm {
     private final Solenoid armSolenoid;
     private final CANSparkMax intakeMotor;
-    private final SparkMaxPIDController intakePID;
     private final TalonFXWrapper armMotor;
     private armStates state = armStates.IDLE;
     private boolean armExtended = false;
@@ -23,7 +22,6 @@ public class Arm {
     public Arm(Solenoid armSolenoid) {
         this.armSolenoid = armSolenoid;
         intakeMotor = new CANSparkMax(//MOTORID, MotorType.kBrushless);
-        intakePID = intakeMotor.getPIDController();
         armMotor = new TalonFXWrapper(43, true);
         retractArm();
     }

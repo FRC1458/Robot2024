@@ -60,6 +60,7 @@ public class Robot extends TimedRobot {
     boostedSpeed = RobotConstants.boostedSpeed;
 
     arm = new Arm(armSolenoid);
+    arm = new Arm(armSolenoid);
     autonomous = new Autonomous(swerveDrive, arm);
   }
 
