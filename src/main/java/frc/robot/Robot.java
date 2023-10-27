@@ -37,7 +37,6 @@ public class Robot extends TimedRobot {
   Timer timer = new Timer();
   int counter = 0;
   Solenoid armSolenoid = new Solenoid(4, 3, 2); // change to correct values
-  Solenoid clawSolenoid = new Solenoid(4, 1, 0);
   Arm arm;
   Autonomous autonomous;
 
@@ -60,7 +59,7 @@ public class Robot extends TimedRobot {
     regularSpeed = RobotConstants.regularSpeed;
     boostedSpeed = RobotConstants.boostedSpeed;
 
-    arm = new Arm(armSolenoid, clawSolenoid);
+    arm = new Arm(armSolenoid);
     autonomous = new Autonomous(swerveDrive, arm);
   }
 

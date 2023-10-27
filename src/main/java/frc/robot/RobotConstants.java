@@ -74,4 +74,5 @@ public class RobotConstants {
     public static final Position position = Position.CENTER;
 
     public static final double armSpeed = .5;
+    public static final double intakeSpeed = .5;//TEST AND CHANGE TO SOMETHING THAT WORKS
 }
