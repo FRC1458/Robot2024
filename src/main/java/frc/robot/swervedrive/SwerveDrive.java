@@ -7,6 +7,7 @@ import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.RobotConstants;
+import com.pathplanner.lib.auto.AutoBuilder;
 
 public class SwerveDrive {
 
@@ -43,7 +44,18 @@ public class SwerveDrive {
 
         speeds = new ChassisSpeeds();
 
-
+        AutoBuilder.configureHolomonic(
+                this::getPose,
+                this::resetPose,
+                this::getRobotRelativeSpeeds,
+                this::driveRobotRelative,
+                new HolonomicPathFollowerConfig(
+                        new PIDConstants(5.0, 0.0, 0.0), //movement PID Constants
+                        new PIDConstants(5.0, 0.0, 0.0), //rotation PID Constants
+                        new ReplanningConfig()
+                ),
+                this
+            );
     }
 
     public void drive(double x, double y, double r, boolean fieldOriented) {

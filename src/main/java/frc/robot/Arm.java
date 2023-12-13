@@ -21,7 +21,7 @@ public class Arm {
 
     public Arm(Solenoid armSolenoid) {
         this.armSolenoid = armSolenoid;
-        intakeMotor = new CANSparkMax(//MOTORID, MotorType.kBrushless);
+        //intakeMotor = new CANSparkMax(MOTORID, MotorType.kBrushless);
         armMotor = new TalonFXWrapper(43, true);
         retractArm();
     }
@@ -156,7 +156,7 @@ public class Arm {
     }
 
     public void openClaw() {
-        intakeMotor.set(RobotConstants.intakeSpeed)
+        intakeMotor.set(RobotConstants.intakeSpeed);
     }
 
     public void closeClaw() {

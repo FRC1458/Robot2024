@@ -1,6 +1,7 @@
 package frc.robot;
 
 import com.kauailabs.navx.frc.AHRS;
+import com.pathplanner.lib.commands.PathPlannerAuto;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
@@ -181,10 +182,15 @@ public class Robot extends TimedRobot {
   }
 
   @Override 
-  public void testInit() {}
+  public void testInit() {
+    superiorReset();
+  }
 
   @Override
-  public void testPeriodic() {}
+  public void testPeriodic() {
+    PathPlannerAuto("1MeterSquare");
+  }
+
 
   public void superiorReset() {
     //swerveDrive.resetNavX();
